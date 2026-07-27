@@ -1,5 +1,5 @@
 # 🚀 Raja Khan | Frontend Developer | Backend Developer Portfolio
-🔗 **Live Link:** [dev-portfolio-url.vercel.app](https://dev-portfolio-url.vercel.app/) <!-- replace with your actual deployed URL -->
+🔗 **Live Link:** [Raja-portfolio.vercel.app]([https://dev-portfolio-url.vercel.app/](https://raja-dev-portfolio-jet.vercel.app/)) <!-- replace with your actual deployed URL -->
 
 A modern, high-performance professional portfolio showcasing my expertise in full-stack web development (MERN), practical AI/GenAI integration, and clean, responsive UI design. Built as a final-year Computer Science student actively targeting frontend and full-stack engineering roles.
 
