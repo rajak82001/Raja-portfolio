@@ -1,0 +1,58 @@
+import { motion } from 'motion/react';
+import SectionHeading from './ui/SectionHeading';
+import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+
+export default function Contact() {
+  return (
+    <section id="contact" className="scroll-mt-32">
+      <SectionHeading rotate="rotate-[-2deg]">Contact</SectionHeading>
+
+      <div className="max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h3 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
+            Let's build something <span className="text-blue underline decoration-wavy decoration-4">amazing</span> together!
+          </h3>
+          <p className="text-xl font-medium mb-12 text-ink/80">
+            I'm always open to opportunities, collaborations or tech conversations.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            <a href="mailto:rajak82001@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6 border-3 border-ink brutal-shadow bg-yellow hover:bg-white hover:-translate-y-1 transition-all rounded-xl font-bold text-lg group">
+              <Mail className="group-hover:scale-110 transition-transform" size={32} />
+              <div className="flex flex-col">
+                <span className="text-sm text-ink/70 font-black uppercase">Send an Email</span>
+                <span className="text-xl">rajak82001@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:6260139459" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6 border-3 border-ink brutal-shadow bg-pink hover:bg-white hover:-translate-y-1 transition-all rounded-xl font-bold text-lg group">
+              <Phone className="group-hover:scale-110 transition-transform" size={32} />
+              <div className="flex flex-col">
+                <span className="text-sm text-ink/70 font-black uppercase">Call Me</span>
+                <span className="text-xl">+91 6260139459</span>
+              </div>
+            </a>
+            <a href="http://www.linkedin.com/in/raja-khan-b69986241/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6 border-3 border-ink brutal-shadow bg-blue hover:bg-white hover:-translate-y-1 transition-all rounded-xl font-bold text-lg group">
+              <Linkedin className="group-hover:scale-110 transition-transform" size={32} />
+              <div className="flex flex-col">
+                <span className="text-sm text-ink/70 font-black uppercase">Connect on</span>
+                <span className="text-xl">LinkedIn</span>
+              </div>
+            </a>
+            <a href="https://github.com/rajak82001" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-6 border-3 border-ink brutal-shadow bg-green hover:bg-white hover:-translate-y-1 transition-all rounded-xl font-bold text-lg group">
+              <Github className="group-hover:scale-110 transition-transform" size={32} />
+              <div className="flex flex-col">
+                <span className="text-sm text-ink/70 font-black uppercase">Follow on</span>
+                <span className="text-xl">GitHub</span>
+              </div>
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
