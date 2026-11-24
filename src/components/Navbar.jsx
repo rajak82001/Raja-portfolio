@@ -30,7 +30,7 @@ export default function Navbar() {
                 {link}
               </a>
             ))}
-            <BrutalButton color="bg-blue" href="/Raja_Khan_Resume.pdf" download="Raja_Resume.pdf">Resume</BrutalButton>
+            <BrutalButton color="bg-blue" href="/Raja_Khan_Resume_24_11_2026.pdf" download="Raja_Resume.pdf">Resume</BrutalButton>
           </div>
 
           {/* Mobile Toggle */}
