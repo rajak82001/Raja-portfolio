@@ -1,13 +1,17 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import BrutalCard from './ui/BrutalCard';
 import BrutalButton from './ui/BrutalButton';
 import SectionHeading from './ui/SectionHeading';
-import { Github, GitCommit, Star, GitPullRequest } from 'lucide-react';
+import CountUp from './ui/CountUp';
+import { Github, GitCommit, FolderGit2, Code2 } from 'lucide-react';
 
 export default function GithubSection() {
+  const [graphFailed, setGraphFailed] = useState(false);
+
   return (
     <section id="github" className="scroll-mt-32">
-      <SectionHeading rotate="rotate-[1deg]">GitHub</SectionHeading>
+      <SectionHeading rotate="rotate-[1deg]" subtitle="Building in public 💻">GitHub</SectionHeading>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -22,7 +26,7 @@ export default function GithubSection() {
               </div>
               <div>
                 <h3 className="text-2xl font-black">@rajak82001</h3>
-                <p className="font-bold text-ink/70">   Full Stack Developer</p>
+                <p className="font-bold text-ink/70">Full Stack Developer</p>
               </div>
             </div>
             <BrutalButton color="bg-yellow" href="https://github.com/rajak82001">
@@ -34,19 +38,19 @@ export default function GithubSection() {
             <div className="border-2 border-ink p-4 rounded-lg bg-blue/10 flex items-center gap-4">
               <GitCommit className="text-blue" />
               <div>
-                <p className="font-black text-2xl">280+</p>
+                <p className="font-black text-2xl"><CountUp to={280} suffix="+" /></p>
                 <p className="font-bold text-sm">Contributions</p>
               </div>
             </div>
             <div className="border-2 border-ink p-4 rounded-lg bg-pink/10 flex items-center gap-4">
-              <Star className="text-pink" />
+              <FolderGit2 className="text-pink" />
               <div>
-                <p className="font-black text-2xl">25+</p>
+                <p className="font-black text-2xl"><CountUp to={25} suffix="+" /></p>
                 <p className="font-bold text-sm">Repositories</p>
               </div>
             </div>
             <div className="border-2 border-ink p-4 rounded-lg bg-green/10 flex items-center gap-4">
-              <GitPullRequest className="text-green" />
+              <Code2 className="text-green" />
               <div>
                 <p className="font-black text-2xl">JavaScript</p>
                 <p className="font-bold text-sm">Top Language</p>
@@ -54,30 +58,34 @@ export default function GithubSection() {
             </div>
           </div>
 
-          {/* Fake Contribution Graph */}
-          <div className="border-2 border-ink p-4 rounded-lg bg-paper overflow-x-auto">
-            <p className="font-bold mb-2">Contribution Graph</p>
-            <div className="flex gap-1 min-w-max">
-              {Array.from({ length: 52 }).map((_, col) => (
-                <div key={col} className="flex flex-col gap-1">
-                  {Array.from({ length: 7 }).map((_, row) => {
-                    const intensity = Math.random();
-                    let color = 'bg-white';
-                    if (intensity > 0.8) color = 'bg-green';
-                    else if (intensity > 0.6) color = 'bg-green/70';
-                    else if (intensity > 0.4) color = 'bg-green/40';
-                    else if (intensity > 0.2) color = 'bg-green/20';
-                    
-                    return (
-                      <div 
-                        key={`${col}-${row}`} 
-                        className={`w-3 h-3 rounded-sm border border-ink/10 ${color}`}
-                      />
-                    );
-                  })}
-                </div>
-              ))}
+          {/* Real contribution graph (falls back to a link if the image service is down) */}
+          <div className="border-2 border-ink p-4 rounded-lg bg-white">
+            <div className="flex items-center justify-between gap-4 mb-3">
+              <p className="font-bold">Contribution Graph</p>
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-ink/60">
+                <span className="w-2 h-2 rounded-full bg-green border border-ink" /> Live from GitHub
+              </span>
             </div>
+            {graphFailed ? (
+              <a
+                href="https://github.com/rajak82001"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-center font-bold py-8 hover:text-blue"
+              >
+                See my contributions on GitHub ↗
+              </a>
+            ) : (
+              <div className="overflow-x-auto">
+                <img
+                  src="https://ghchart.rshah.org/16a34a/rajak82001"
+                  alt="Raja Khan's GitHub contribution graph for the past year"
+                  loading="lazy"
+                  onError={() => setGraphFailed(true)}
+                  className="w-full min-w-[640px]"
+                />
+              </div>
+            )}
           </div>
         </BrutalCard>
       </motion.div>

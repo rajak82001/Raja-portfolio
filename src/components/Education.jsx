@@ -32,7 +32,7 @@ export default function Education() {
 
   return (
     <section id="education" className="scroll-mt-32">
-      <SectionHeading rotate="rotate-[2deg]">Education</SectionHeading>
+      <SectionHeading rotate="rotate-[2deg]" subtitle="Where I learned the fundamentals 🎓">Education</SectionHeading>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {edu.map((item, idx) => (
