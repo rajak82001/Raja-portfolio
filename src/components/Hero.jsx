@@ -54,7 +54,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex flex-col md:flex-row items-center justify-between gap-14 md:gap-12 pt-0 md:pt-4 pb-4"
+      className="relative flex flex-col lg:flex-row items-center justify-between gap-14 lg:gap-12 pt-0 md:pt-4 pb-4"
     >
       {/* Background doodles */}
       <motion.svg

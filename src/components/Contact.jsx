@@ -107,18 +107,18 @@ export default function Contact() {
                   show: { opacity: 1, y: 0, rotate, transition: { type: 'spring', stiffness: 200, damping: 16 } },
                 }}
                 whileHover={{ rotate: 0, y: -6, transition: { type: 'spring', stiffness: 300, damping: 15 } }}
-                className={`group flex items-center gap-4 p-6 border-3 border-ink brutal-shadow ${color} hover:bg-white transition-colors rounded-xl font-bold text-lg`}
+                className={`group flex items-center gap-3 sm:gap-4 p-5 lg:p-6 border-3 border-ink brutal-shadow ${color} hover:bg-white transition-colors rounded-xl font-bold text-lg`}
               >
-                <span className="grid place-items-center shrink-0 w-14 h-14 rounded-full bg-white border-2 border-ink group-hover:rotate-12 group-hover:scale-110 transition-transform">
+                <span className="grid place-items-center shrink-0 w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white border-2 border-ink group-hover:rotate-12 group-hover:scale-110 transition-transform">
                   <Icon size={26} />
                 </span>
                 <span className="flex flex-col min-w-0">
                   <span className="text-sm text-ink/70 font-black uppercase">{kicker}</span>
-                  <span className="text-lg sm:text-xl break-all">{value}</span>
+                  <span className="text-base lg:text-xl [overflow-wrap:anywhere]">{value}</span>
                 </span>
                 <ArrowUpRight
                   size={22}
-                  className="ml-auto shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
+                  className="hidden lg:block ml-auto shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"
                 />
               </motion.a>
             );

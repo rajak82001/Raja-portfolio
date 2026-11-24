@@ -45,7 +45,7 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-1 lg:gap-2 font-bold text-sm lg:text-base">
+          <div className="hidden lg:flex items-center gap-1 xl:gap-2 font-bold">
             {links.map((link) => {
               const id = link.toLowerCase();
               const isActive = active === id;
@@ -80,7 +80,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Toggle */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="lg:hidden flex items-center gap-2">
           <button
             type="button"
             onClick={openPalette}
@@ -90,7 +90,7 @@ export default function Navbar() {
             <Search size={24} />
           </button>
           <button
-            className="md:hidden border-2 border-ink p-1 bg-white rounded-md"
+            className="lg:hidden border-2 border-ink p-1 bg-white rounded-md"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
@@ -108,7 +108,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden mt-2 border-3 border-ink brutal-shadow bg-white p-4 rounded-xl flex flex-col space-y-2 font-bold"
+              className="lg:hidden mt-2 border-3 border-ink brutal-shadow bg-white p-4 rounded-xl flex flex-col space-y-2 font-bold"
             >
               {links.map((link) => {
                 const id = link.toLowerCase();
