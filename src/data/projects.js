@@ -44,6 +44,30 @@ export const projects = [
   },
 
   {
+    title: "Nexora",
+    featured: true,
+    type: "FRONTEND PROJECT",
+    oneLiner: "Software & Mobile Comparison Platform.",
+    origin: "Built to make comparing software and mobiles quick, clear and searchable.",
+    techCallout: "SEO-First Next.js",
+    description:
+      "A responsive content and comparison platform with dynamic blog, comparison and guide pages built from reusable components and route-based rendering. SEO-focused page structure with dynamic metadata, semantic sections and search-friendly URLs, plus API-driven data optimized for desktop and mobile.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "REST APIs",
+      "SEO",
+    ],
+    live: "https://nexoracompare.vercel.app/",
+    github: "https://github.com/rajak82001/nexora",
+    screenshot: "/assets/nexora.jpg",
+    bgColor: "#1E1B4B",
+    rotation: -1,
+  },
+
+  {
     title: "B2B Outreach Pipeline",
     featured: true,
     type: "BACKEND PROJECT",
