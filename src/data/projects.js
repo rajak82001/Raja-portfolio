@@ -68,6 +68,23 @@ export const projects = [
   },
 
   {
+    title: "Mobiles24 Store Themes",
+    featured: false,
+    type: "COMPANY PROJECT · PHONEO",
+    oneLiner: "Theme-Based Storefronts for Mobile Retailers.",
+    origin: "Built at Phoneo to give every retailer a ready-to-launch, branded store site.",
+    techCallout: "11+ Themes, 2 APIs",
+    description:
+      "Landing and product detail pages for mobile retailers, each powered by its own REST API, built as a theme system with 11+ interchangeable designs. Includes live inventory stats, search, used/new/accessory listings and WhatsApp-first enquiries.",
+    stack: ["Next.js", "React", "REST APIs", "Theme System", "Responsive UI"],
+    live: "https://a1.phoneo.site/mobiles24",
+    github: "",
+    screenshot: "/assets/phoneo_mobiles24.jpg",
+    bgColor: "#0F3D35",
+    rotation: 1,
+  },
+
+  {
     title: "B2B Outreach Pipeline",
     featured: true,
     type: "BACKEND PROJECT",
