@@ -109,7 +109,7 @@ export default function Hero() {
           </BrutalButton>
           <BrutalButton
             color="bg-white"
-            href="/Raja_Khan_Resume_09_2026.pdf"
+            href="/Raja_Khan_Resume_24_11_2026.pdf"
             download="Raja_Resume.pdf"
           >
             Download Resume
