@@ -18,6 +18,33 @@
 /** @type {Project[]} */
 export const projects = [
   {
+    title: "Ghost Shoppers",
+    featured: true,
+    type: "AI PROJECT",
+    oneLiner: "AI Mystery Shoppers for Your Website.",
+    origin: "Built after seeing small phone shops lose customers to pages they never got feedback on.",
+    techCallout: "Vision LLM + Evals",
+    description:
+      "Four AI shopper personas review a page screenshot against the business goal (buy online, WhatsApp enquiry or store visit) and return a ranked fix list with evidence. Schema-validated Gemini vision output, self-correcting retries, model fallback, rate limits with caching, and an eval harness on real screenshots.",
+    stack: [
+      "React",
+      "Gemini Vision",
+      "Groq",
+      "Node.js",
+      "Vercel Functions",
+      "Zod",
+      "Redis",
+      "Vitest",
+      "Tailwind CSS",
+    ],
+    live: "https://ghost-shoppers.vercel.app/",
+    github: "",
+    screenshot: "/assets/ghost_shoppers.jpg",
+    bgColor: "#0B0F07",
+    rotation: -1,
+  },
+
+  {
     title: "Pixmart",
     featured: true,
     type: "FULL STACK PROJECT",
